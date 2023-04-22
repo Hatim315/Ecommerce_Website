@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{%block title%}   Products
+
+{%endblock title%}
+{%block body %}
+
+<style>
+    .card-horizontal {
+        display: flex;
+        flex: 1 1 auto;
+      }
+    .rang{
+        color:Red;
+    }
+    
+    
+    
+    </style>
+    
+
+   
+<form action="/products" method="POST">
+    {% csrf_token %}
+    {%for image in shop_image%}
+    
+        <div class="container my-4" >
+            <div class="row">
+             <div class="col-md-4 ">
+            <div class="row">
+
+            <img src="{{image.imo.url}} " height="200" width="400" >
+        
+           </div>
+        </div>
+            <div class="col-md-8 ">
+              <h5 class="card-title" id="nampr{{image.id}}" >{{image.name}}</h5>
+              <p class="card-text" name="description">{{image.desc}}</p>
+              <strong>$</strong><strong id="pripr{{image.id}}" class="rang" >{{image.price}}</strong>
+              <a href="/checkpr/{{image.id}}" class="btn btn-primary" >Buy</a>
+              <a class="btn btn-primary" onclick=hero(this) id="pr{{image.id}}">Add to cart</a>
+            </div>
+            
+        </div>
+            
+        </div>
+        
+
+        
+    {%endfor%}
+        </form>
+{%endblock body%}
+
+
+  

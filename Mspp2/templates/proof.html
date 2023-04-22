@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{%block title%}Checking...{%endblock%}
+{%block body%}
+<style>
+    .center{
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
+        width:50%,
+    }
+    .mono{ 
+        left:400px;
+    }
+</style>
+{%load static%}
+<b class="mono"> You can pay me through upi also</b>
+<h1 class"mono">6239813625@ybl</h1>
+<h2>Amount={{image.price}}</h2>
+<img src="{%static 'pay.jpg'%}" class="center" height='800'>
+<form method="POST">
+    {%csrf_token%}
+<button class="btn btn-primary" >Done</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

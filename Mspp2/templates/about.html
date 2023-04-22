@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%block title%}   Contact Us
+
+{%endblock title%}
+{%block body %}
+<form method="POST" action="/about">
+    {% csrf_token %}
+    <div class="form-group" position="relative">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+        
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Phone</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phonenumber">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" action="/about">Submit</button>
+  </form>
+{%endblock body%}
+
+
+  

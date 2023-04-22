@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{%block body%}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your cart</span>
+                <span class="badge badge-secondary badge-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3 sticky-top" id="clist">
+                {%if image%}
+                <li class="list-group-item d-flex justify-content-between lh-condensed"><h6 class="my-0">{{image.name}}</h6>
+                    <small>Rs {{image.price}}</small></li>
+                {%endif%}
+            </ul>
+            
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <form class="needs-validation" method="POST" novalidate="">{% csrf_token %}
+                <input type="hidden" name="items" id="itemsk"></input>
+                <input type="hidden" name="iorder" id="item"></input>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">Name</label>
+                        <input type="text" class="form-control" name="naam" id="firstName" placeholder="" value="" required="">
+                        <div class="invalid-feedback"> Valid first name is required. </div>
+                    
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="">
+                        <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" name="emale" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                </div>
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" name="pata" id="address" placeholder="1234 Main St" required="">
+                    <div class="invalid-feedback"> Please enter your shipping address. </div>
+                </div>
+                <div class="mb-3">
+                    <label for="address2">City <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" name="shehar" placeholder="Apartment or suite">
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-4 mb-3">
+                        <label for="state">State</label>
+                        <input class="custom-select d-block w-100" name="state" id="state" required="">
+                            
+                        </input>
+                        <div class="invalid-feedback"> Please provide a valid state. </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" id="zip" name='zip' placeholder="" required="">
+                        <div class="invalid-feedback"> Zip code required. </div>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="same-address">
+                    <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="save-info">
+                    <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                </div>
+                <hr class="mb-4">
+                <h4 class="mb-3">Payment</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit"  name="jo" type="checkbox" class="custom-control-input" checked="" required="">
+                        <label class="custom-control-label" for="credit">Cash on delivery</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="debit"  name="" type="checkbox" class="custom-control-input" required="">
+                        <label class="custom-control-label" for="debit">Debit card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="paypal"  name="joj" type="checkbox" class="custom-control-input" required="">
+                        <label class="custom-control-label" for="paypal">PayPal</label>
+                    </div>
+                </div>
+                
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+
+            </form>
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static '/jss/csk.js' %}"</script>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2017-2019 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>
+ {% endblock %}

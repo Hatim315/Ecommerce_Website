@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{image.name}}
+{% endblock title %}
+{%block body%}
+<div class="container my-4">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="row">
+    
+    <img src ="{{image.imo.url}}">
+    </div>
+</div>
+    
+<div class="col-md-8">
+    <h5>{{image.name}} {{image.desc}}</h5>
+    <a href="/pay/{{image.id}}"><button id='pr{{image.id}}'class="cart">Buy</button></a>
+ </div>
+ 
+</div>
+</div>
+
+{%endblock body%}

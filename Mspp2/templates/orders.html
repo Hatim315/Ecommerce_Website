@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block title%}
+ORDERS
+
+{%endblock%}
+{%block body%}
+{%for i in price%}
+
+<div class="container my-4 border border-dark">
+   
+  
+  <div class="row">
+    <div class="col-md-8">
+      <h5 class="card-title"  >{{i.0}}</h5>
+      <p class="card-text" name="description">This is a good product and has been favoured by most of our customer  </p>
+      <h1>Current Status:{{i.2}}</h1>
+      <strong  class="rang" >Rs{{i.1}}</strong>
+      
+      
+    </div>
+    
+    
+</div>
+
+</div>
+{%endfor%}
+{%endblock%}
