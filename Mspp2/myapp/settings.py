@@ -26,7 +26,8 @@ SECRET_KEY = 'please enter a new secret key here or run python main.py'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+RAZOR_KEY_ID="rzp_test_rCQG6BHr6mY5VD"
+RAZOR_KEY_SECRET="oJEuFbYBM34Glybkuz4MdRks"
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = []
 

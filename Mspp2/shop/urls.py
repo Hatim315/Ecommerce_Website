@@ -24,6 +24,9 @@ urlpatterns = [
     path('pay/<int:paid>',views.pay),
     path('checkout',views.checkout),
     path('orders',views.orders),
+    path('search',views.search),
+    path('payon',views.payment),
+    path("paymenthandler/",views.paymentHandler)
       
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

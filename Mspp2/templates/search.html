@@ -12,16 +12,33 @@
     .rang{
         color:Red;
     }
-    
+    #im{
+        position: relative;
+        
+        left:400px;
+        
+        font-family:cursive;
+        
+    }
     
     
     </style>
-    
-
+{%if searchitems|length == 0 %}
+<div id="im">
+    <h2 >Search Results:</h2>
+   <p > No Results Found</p>
+   <p > Your Search:{{query}} has not matched with any products.</p>
+   <ul>
+    <li>Please Check if there is any spelling mistakes.</li>
+    <li>Try different keywords</li>
+    <li>Be more Clear</li>
+    <li> Try general keywords</li>
+   </ul></div>
+    {%endif%}
    
 <form action="/products" method="POST">
     {% csrf_token %}
-    {%for image in shop_image%}
+    {%for image in searchitems%}
     
         <div class="container my-4" >
             <div class="row">
