@@ -17,11 +17,13 @@ I will fix them in near future.
 - [ ] Add type of product in product table.
 - [ ] Add filter of products in product page.
 - [ ] Organising products in page numbers.
+- [x] Add payment page on website.
+- [ ] Fix errors related to payment of cart items.
 - [x] Add search functionality.
 - [x] Add Login,Logout and Sign ups.
 - [ ] Add a User Profile page.
 - [x] Add cart functionality
-- [x] Add model of recording customer data of orders to database and show it on orders page.
+- [x] Add model of recording customer data of orders to database and show it on orders page. 
 - [ ] Host this site on hosting service like aws or heroku.
 
 
