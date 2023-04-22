@@ -1,7 +1,6 @@
 from django.db import models
 from datetime import datetime
 import django
-from django_mysql.models import ListCharField
 
 
 # Create your models here.
