@@ -22,6 +22,7 @@ I will fix them in near future.
 - [ ] Add a User Profile page.
 - [x] Add cart functionality
 - [x] Add model of recording customer data of orders to database and show it on orders page.
+- [ ] Host this site on hosting service like aws or heroku.
 
 
 ## For removing your confusion of dirs read below
