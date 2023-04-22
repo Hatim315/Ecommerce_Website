@@ -10,8 +10,20 @@ I will fix them in near future.
 5. You can generate this token running ```python secret_key_generator.py``` .
 6. After all this you can start the server by using ```python manage.py runserver```.
 #### Note: Admin page is on "adminJojoj/" url.
+
 ## To-Do List
-- [x] Add model for products as well as a prooduct page. 
+- [x] Start the project and add about, home page.
+- [x] Add model for products as well as a product page.
+- [ ] Add type of product in product table.
+- [ ] Add filter of products in product page.
+- [ ] Organising products in page numbers.
+- [x] Add search functionality.
+- [x] Add Login,Logout and Sign ups.
+- [ ] Add a User Profile page.
+- [x] Add cart functionality
+- [x] Add model of recording customer data of orders to database and show it on orders page.
+
+
 ## For removing your confusion of dirs read below
 
 **myapp/** - This dir contains common project files like settings.py
