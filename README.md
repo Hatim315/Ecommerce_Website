@@ -12,7 +12,7 @@ I will fix them in near future.
 #### Note: Admin page is on "adminJojoj/" url.
 
 ## To-Do List
-- [x] Start the project and add about, home page.
+- [x] Start the project and add about and home page.
 - [x] Add model for products as well as a product page.
 - [ ] Add type of product in product table.
 - [ ] Add filter of products in product page.
