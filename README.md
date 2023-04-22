@@ -9,6 +9,7 @@ I will fix them in near future.
 4. Here, migrations has been already done but you have to change **secret_token** in myapp/settings.py
 5. You can generate this token running ```python secret_key_generator.py``` .
 6. After all this you can start the server by using ```python manage.py runserver```.
+#### Note: Admin page is on "adminJojoj/" url.
 
 ## For removing your confusion of dirs read below
 
