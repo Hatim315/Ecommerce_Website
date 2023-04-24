@@ -30,8 +30,8 @@ I will fix them in near future.
 ## For removing your confusion of dirs read below
 
 **myapp/** - This dir contains common project files like settings.py.<br>
-**jojo/** -This folder is an app which contain views of login,logout,about,home of the website.<br>
-**shop/** - This dir contains views of all shoppiing functions like checout, product page, cart, storing customer data.
+**jojo/** -This folder is an app which contain views of login,logout, about and home of the website.<br>
+**shop/** - This dir contains views of all shoppiing functions like checkout, product page, cart and storing customer data.
 
 ## Conclusion
 
