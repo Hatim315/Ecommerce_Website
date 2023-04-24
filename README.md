@@ -29,8 +29,8 @@ I will fix them in near future.
 
 ## For removing your confusion of dirs read below
 
-**myapp/** - This dir contains common project files like settings.py
-**jojo/** -This folder is an app which contain views of login,logout,about,home of the website.
+**myapp/** - This dir contains common project files like settings.py.<be>
+**jojo/** -This folder is an app which contain views of login,logout,about,home of the website.<br>
 **shop/** - This dir contains views of all shoppiing functions like checout, product page, cart, storing customer data.
 
 ## Conclusion
